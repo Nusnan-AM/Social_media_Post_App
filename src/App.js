@@ -52,7 +52,7 @@ function App() {
 
   const [postTitle, setPostTitle] = useState("");
   const [postBody, setPostBody] = useState("");
-  const Navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -63,13 +63,13 @@ function App() {
     setPosts(allPosts);
     setPostTitle("");
     setPostBody("");
-    Navigate('/')
+    navigate('/')
   };
 
   const handleDelete = (id) => {
     const PostsList = posts.filter((post) => post.id !== id); // Filter out the post by ID
     setPosts(PostsList);
-    Navigate('/')
+    navigate('/')
   };
 
 
